@@ -11,31 +11,29 @@
 </head>
 <body>
 
-    
     <div class="header collection-header">
         <div class="container">
             <div class="navbar">
                 <div class="logo">
-                    <img src="Images/PUNYETE Logo.png" width="125px">
+                    <img src="Images/PUNYETE Logo.png" width="125px" alt="Punyete Logo">
                 </div>
                 <nav>
                     <ul>
-                <Li><a href="Home.html" class="active">Home</a></Li>
-                <Li><a href="Contact.html" >Contact</a></Li>
-                <Li><a href="About us.html" >About us</a></Li>
-                <Li><a href="Collection.html" >collection</a></Li>
-                <Li><a href="product details.html" >Details</a></Li>
-            </ul>
+                        <li><a href="Home.html">Home</a></li>
+                        <li><a href="Contact.html" class="active">Contact</a></li>
+                        <li><a href="About us.html">About us</a></li>
+                        <li><a href="Collection.html">collection</a></li>
+                        <li><a href="product details.html">Details</a></li>
+                    </ul>
                 </nav>
                 <a href="Cart.html" class="cart-icon">
-                    <img src="Images/cart 3.png" width="30px" height="30px">
+                    <img src="Images/cart 3.png" width="30px" height="30px" alt="Cart">
                 </a>
-                <img src="Images/MENU ICON.png" class="menu-icon">
+                <img src="Images/MENU ICON.png" class="menu-icon" alt="Menu Icon">
             </div>
         </div>
     </div>
 
-    
     <div class="small-containers" style="margin-top: 50px; margin-bottom: 80px;">
         <h2 class="title">Get In Touch</h2>
         
@@ -43,15 +41,16 @@
 
             <div class="col-2" style="background: #f9f9f9; padding: 30px; border-radius: 10px;">
                 <h3>Send Us A Message</h3>
-                <form style="margin-top: 20px;">
+                <!-- Form id added for JavaScript targeting -->
+                <form id="contact-form" style="margin-top: 20px;">
                     <label style="display: block; margin-bottom: 5px; font-weight: bold;">Full Name</label>
-                    <input type="text" placeholder="Your Name" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ffcb3b; border-radius: 5px; outline: none;">
+                    <input type="text" id="form-name" placeholder="Your Name" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ffcb3b; border-radius: 5px; outline: none;">
 
                     <label style="display: block; margin-bottom: 5px; font-weight: bold;">Email Address</label>
-                    <input type="email" placeholder="Your Email" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ffcb3b; border-radius: 5px; outline: none;">
+                    <input type="email" id="form-email" placeholder="Your Email" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ffcb3b; border-radius: 5px; outline: none;">
 
                     <label style="display: block; margin-bottom: 5px; font-weight: bold;">Subject</label>
-                    <select style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ffcb3b; border-radius: 5px;">
+                    <select id="form-subject" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ffcb3b; border-radius: 5px;">
                         <option>General Inquiry</option>
                         <option>Order Status & Shipping</option>
                         <option>Sizing & Stock Query</option>
@@ -59,7 +58,7 @@
                     </select>
 
                     <label style="display: block; margin-bottom: 5px; font-weight: bold;">Message</label>
-                    <textarea rows="5" placeholder="How can we help you?" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ffcb3b; border-radius: 5px; outline: none; font-family: inherit;"></textarea>
+                    <textarea id="form-message" rows="5" placeholder="How can we help you?" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ffcb3b; border-radius: 5px; outline: none; font-family: inherit;"></textarea>
 
                     <button type="submit" class="btn" style="border: none; cursor: pointer; width: 100%;">Send Message &#9841;</button>
                 </form>
@@ -85,6 +84,13 @@
                 </div>
             </div>
         </div>
+
+        <section>
+            <div class="box">
+                <h2>WHERE YOU CAN FIND US</h2>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.9362728347837!2d28.32752457467056!3d-25.739620945213094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e955f004dde2b35%3A0x72d9c163b84680fa!2sPunyete%20Showroom!5e0!3m2!1sen!2sza!4v1793474066807!5m2!1sen!2sza" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </section>
     </div>
 
     <!-- Footer -->
@@ -92,9 +98,10 @@
         <div class="container">
             <div class="row">
                 <div class="footer-col-1">
-                    <img src="Images/PUNYETE LOGO 2.png">
+                    <img src="Images/PUNYETE LOGO 2.png" alt="Punyete Logo Footer">
                     <p>Our Purpose is to sustainably make the pleasure and benefits of South African Style accessible to everyone.</p>
                 </div>
+                
                 <div class="footer-col-2">
                     <h3>Useful links</h3>
                     <ul>
@@ -114,9 +121,13 @@
                 </div>
             </div>
             <hr>
-            <p class="copyright">Copyright 2026 - Nhlanhla LJ Phiri</p>
+            <p class="copyright">Copyright 2026 -Nhlanhla LJ Phiri
+                <br> ST10518165
+            </p>
         </div>
     </div>
 
+    <!-- External JavaScript File -->
+    <script src="script.js"></script>
 </body>
 </html>

@@ -9,6 +9,25 @@ body {
     font-weight: 400;
     font-style: normal;
 }
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5em;
+    color:#555;
+}
+iframe{
+    border-radius: 2em;
+    border: none;
+    width: 500px;
+    height: 500px;
+    opacity: 0.7;
+    transition: 0.3s ease-in-out; 
+}
+iframe:hover{
+    transform: scale(1,1);
+    opacity: 1;
+}
 
 .container {
     max-width: 1300px;
@@ -308,61 +327,44 @@ th:last-child{
 
 /* media queries */
 
-@media only screen and (max-width: 800px) {
-    nav ul {
+/* Add smooth transition effects to layout blocks and navigation */
+.row, .col-2, .navbar nav ul {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Mobile Responsive Breakpoint (for tablets and phones under 768px wide) */
+@media screen and (max-width: 768px) {
+    /* Stack side-by-side columns vertically on mobile */
+    .row {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* Adjust padding and width for mobile screens */
+    .col-2 {
+        padding: 15px !important;
+        width: 100% !important;
+    }
+
+    /* Smooth dropdown/collapsible mobile menu */
+    .navbar nav ul {
         position: absolute;
         top: 70px;
         left: 0;
-        background: #333;
+        background: #fff;
         width: 100%;
         overflow: hidden;
-        transition: max-height 0.5s;
-        max-height: 0px;
-        z-index: 100;
+        max-height: 0;
+        transition: max-height 0.4s ease-in-out;
+        flex-direction: column;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
     }
-    nav ul li {
-        display: block;
-        margin-right: 50px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-    nav ul li a {
-        color: #fff;
-    }
-    .menu-icon {
-        display: block;
-        cursor: pointer;
-    }
-    .navbar h2 {
-        font-size: 14px;
+
+    /* Class triggered by JS when menu icon is clicked */
+    .navbar nav ul.active-menu {
+        max-height: 300px; 
     }
 }
-@media only screen and (max-width: 600px) {
-    .row {
-        text-align: center;
-    }
-
-    .col-2, .col-3, .col-4 {
-        flex-basis: 100%;
-    }
-
-    .col-2 h1 {
-        font-size: 22px;
-        line-height: 30px;
-    }
-
-    .navbar h2 {
-        display: none;
-    }
-
-    .title {
-        font-size: 20px;
-    }
-    .cart-info p{
-        display: none;
-    }
-}
-
 /* ----------single product--------- */
 
 .single-product {
