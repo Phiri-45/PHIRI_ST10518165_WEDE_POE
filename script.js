@@ -56,12 +56,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const searchInput = document.getElementById("site-search-input");
     const searchBtn = document.getElementById("search-btn");
     
-    // Select product containers/cards on the page
-    // Note: Make sure your product wrapper divs have a class (e.g., "product-card") or adjust selector accordingly
+    // Select product containers
     const productCards = document.querySelectorAll(".row .col-4, .row div:has(h4)");
 
     if (searchInput) {
-        // Function to filter products based on search term
+      
         const filterProducts = () => {
             const query = searchInput.value.toLowerCase().trim();
 
