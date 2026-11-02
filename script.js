@@ -50,3 +50,42 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+document.addEventListener("DOMContentLoaded", () => {
+    
+    // Select Search Bar Elements
+    const searchInput = document.getElementById("site-search-input");
+    const searchBtn = document.getElementById("search-btn");
+    
+    // Select product containers/cards on the page
+    // Note: Make sure your product wrapper divs have a class (e.g., "product-card") or adjust selector accordingly
+    const productCards = document.querySelectorAll(".row .col-4, .row div:has(h4)");
+
+    if (searchInput) {
+        // Function to filter products based on search term
+        const filterProducts = () => {
+            const query = searchInput.value.toLowerCase().trim();
+
+            productCards.forEach((card) => {
+                const titleElement = card.querySelector("h4");
+                if (titleElement) {
+                    const titleText = titleElement.textContent.toLowerCase();
+
+                    if (titleText.includes(query)) {
+                        card.classList.remove("product-hidden");
+                    } else {
+                        card.classList.add("product-hidden");
+                    }
+                }
+            });
+        };
+
+        // Trigger filter on typing (Real-time live search)
+        searchInput.addEventListener("input", filterProducts);
+
+        // Optional: Trigger filter when clicking the search button
+        if (searchBtn) {
+            searchBtn.addEventListener("click", filterProducts);
+        }
+    }
+
+});
