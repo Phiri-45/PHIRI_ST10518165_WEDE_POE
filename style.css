@@ -113,7 +113,6 @@ p {
     margin: 25px 0;
 }
 
-/*----BUTTONS------*/
 .btn {
     display: inline-block;
     background: #ebc107e3;
@@ -266,7 +265,7 @@ select:focus {
     display: block;
 }
 
-/* --------cart items------- */
+
 .cart-page{
     margin: 80px auto;
 }
@@ -327,26 +326,23 @@ th:last-child{
 
 /* media queries */
 
-/* Add smooth transition effects to layout blocks and navigation */
 .row, .col-2, .navbar nav ul {
     transition: all 0.3s ease-in-out;
 }
 
-/* Mobile Responsive Breakpoint (for tablets and phones under 768px wide) */
 @media screen and (max-width: 768px) {
-    /* Stack side-by-side columns vertically on mobile */
+    
     .row {
         flex-direction: column;
         width: 100%;
     }
 
-    /* Adjust padding and width for mobile screens */
     .col-2 {
         padding: 15px !important;
         width: 100% !important;
     }
 
-    /* Smooth dropdown/collapsible mobile menu */
+
     .navbar nav ul {
         position: absolute;
         top: 70px;
@@ -360,12 +356,11 @@ th:last-child{
         box-shadow: 0 5px 10px rgba(0,0,0,0.1);
     }
 
-    /* Class triggered by JS when menu icon is clicked */
     .navbar nav ul.active-menu {
         max-height: 300px; 
     }
 }
-/* Search Bar Container Styling */
+
 .search-container {
     display: flex;
     align-items: center;
@@ -378,7 +373,7 @@ th:last-child{
     width: 100%;
     padding: 12px 18px;
     font-size: 14px;
-    border: 2px solid #ffcb3b; /* PUNYETE brand yellow accent */
+    border: 2px solid #ffcb3b; 
     border-radius: 25px 0 0 25px;
     outline: none;
     font-family: inherit;
